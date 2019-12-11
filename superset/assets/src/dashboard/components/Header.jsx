@@ -285,6 +285,11 @@ class Header extends React.PureComponent {
     const userCanSaveAs = dashboardInfo.dash_save_perm;
     const popButton = hasUnsavedChanges;
 
+    // EDIT: Disable the dashboard header
+    if (!userCanSaveAs) {
+      return null;
+    }
+
     return (
       <div className="dashboard-header">
         <div className="dashboard-component-header header-large">
