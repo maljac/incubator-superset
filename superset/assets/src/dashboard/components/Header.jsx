@@ -286,7 +286,7 @@ class Header extends React.PureComponent {
     const popButton = hasUnsavedChanges;
 
     // EDIT: Disable the dashboard header
-    if (!userCanSaveAs) {
+    if (!userCanEdit) {
       return null;
     }
 
